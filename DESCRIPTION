@@ -15,9 +15,9 @@ BugReports: https://github.com/stephenslab/miximash/issues
 Description: This package implements a generalization of the Cormotif
     model (Y. Wei, T. Tenzen & H. Ji, 2015,
     <DOI:10.1093/biostatistics/kxu038>) for jointly analyzing
-    differential gene expression in multiple studies, under multiple
-    experimental conditions (e.g., measured in different cell
-    types). Model fitting procedures are implemented using expectation
+    differential gene expression in multiple studies or under multiple
+    experimental conditions (e.g., measured in different cell types). 
+    Model fitting procedures are implemented using expectation
     maximizatino (EM).
 Depends: 
     R (>= 3.4.0)
