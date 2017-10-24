@@ -29,25 +29,24 @@ set.seed(1)
 # Get the number of motifs.
 K <- length(pi0)
 
-stop()
-
 # Simulate genes from the miximash model.
 betahat <- matrix(0,n,R)
 k <- rep(1:K,times = pi0*n)
-A <- q0[rows,]
-for(i in 1:n){
-  for(r in 1:R){
-    if(A[i,r] == 1) {
-      betahat[g,r] = rnorm(1,0,sqrt(1+sigma2[r]))
-    } else{
-      betahat[g,r] = rnorm(1,0,1)
+A <- q0[k,]
+for (i in 1:n) {
+  for (r in 1:R) {
+    if (A[i,r] == 1) {
+      betahat[i,r] = rnorm(1,0,sqrt(1 + sigma2[r]))
+    } else {
+      betahat[i,r] = rnorm(1,0,1)
     }
   }
 }
 
-betahat <- X
-sebetahat <- matrix(1,nrow=G,ncol=D)
-# fit the model
+sebetahat <- matrix(1,n,R)
 
-# SAVE DATA SET TO FILE
-# ---------------------
+# FIT MIXIMASH MODEL USING EM
+# ---------------------------
+fit1 <- miximash(betahat,sebetahat,K = 4,mess = TRUE)
+
+
