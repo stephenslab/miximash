@@ -4,8 +4,8 @@
 
 # SCRIPT SETTINGS
 # ---------------
-R <- 4     # Number of studies/conditions.
-n <- 5000  # Number of samples (genes).
+R <- 4    # Number of studies/conditions.
+n <- 800  # Number of samples (genes).
 
 # This specifies the prior variances for the motif components.
 sigma2 <- c(16,16,16,16)
@@ -47,6 +47,6 @@ sebetahat <- matrix(1,n,R)
 
 # FIT MIXIMASH MODEL USING EM
 # ---------------------------
-fit1 <- miximash(betahat,sebetahat,K = 4,mess = TRUE)
+fit1 <- miximash(betahat,sebetahat,K = 2,mess = TRUE)
 
 

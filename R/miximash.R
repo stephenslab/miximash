@@ -42,7 +42,7 @@ miximash <- function (betahat, sebetahat, mixcompdist = "normal",
   data = list()
   for(r in 1:R){
     data[[r]] = set_data(betahat[,r], sebetahat[,r], lik, alpha)
-    matrix_llik[[r]] =  t(ashr:::log_comp_dens_conv(g,data[[r]]))
+    matrix_llik[[r]] =  t(ashr:::log_comp_dens_conv.normalmix(g,data[[r]]))
   }
   
   ## fit the model via EM 
