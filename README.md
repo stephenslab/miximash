@@ -38,7 +38,7 @@ document()
 
 ```bash
 R CMD build miximash
-R CMD check --as-cran miximash_0.1-0.tar.gz
+R CMD check --as-cran miximash_0.1-1.tar.gz
 ```
 
 ## Credits
