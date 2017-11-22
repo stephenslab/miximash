@@ -2,8 +2,8 @@ Package: miximash
 Encoding: UTF-8
 Type: Package
 LazyData: true
-Version: 0.1-0
-Date: 2017-10-17
+Version: 0.1-1
+Date: 2017-11-21
 Title: Mixtures of Independent Components in Multivariate Adaptive Shrinkage
 Authors@R: c(person("Zhiwei","Ma",role=c("aut","cre"),
                     email="workyoungseok@gmail.com"),
